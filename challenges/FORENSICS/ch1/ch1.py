@@ -1,11 +1,11 @@
 import os
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 
 flag = "CSC{345y_r1gh7?_l0l}"
-image = Image.new(mode="RGBA", size=(100, 50), color="black")
+image = Image.new(mode="RGBA", size=(500, 50), color="black")
 text_layer = Image.new('RGBA', image.size, (0, 0, 0, 0))
 draw = ImageDraw.Draw(text_layer)
-draw.text((10,10), flag, fill="white")
+draw.text((10,10), flag, fill="white", font=ImageFont.load_default(size=20))
 res_image = Image.alpha_composite(image.convert("RGBA"), text_layer)
 
 image = Image.open("the_rock.png")
@@ -31,3 +31,5 @@ with open("secret.png", "rb") as f:
 
 with open("findme.png", "wb") as f:
     f.write(b1)
+
+os.system("rm secret.png")
