@@ -1,4 +1,4 @@
-# Catch The Futoor
+# Ramadan CTF
 
 
 # Challenge must have/do
