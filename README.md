@@ -11,7 +11,8 @@
 Before you add a challenge make sure you follow these steps:
 - `git pull https://github.com/Cyber-Security-Club-HTU/RamadanCTF.git` Get Latest Changes 
 - `git branch <challenge-name>` Create a new branch with challenge name
+- cd challenges/<your-category>
 - Create a folder with the challenge name under the right category directory
-- Stage your challenge files 
+- Add and Stage your challenge files 
 - `git push`
-- Make sure you raise a Pull Request and ask anyone to review the challenge
+- Make sure you raise a Pull Request and ask to review the challenge
