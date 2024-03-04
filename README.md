@@ -9,7 +9,7 @@
 
 # Adding challenges
 Before you add a challenge make sure you follow these steps:
-- `git pull` Get lastest changes 
+- `git pull https://github.com/Cyber-Security-Club-HTU/RamadanCTF.git` Get Latest Changes 
 - `git branch <challenge-name>` Create a new branch with challenge name
 - Create a folder with the challenge name under the right category directory
 - Stage your challenge files 
