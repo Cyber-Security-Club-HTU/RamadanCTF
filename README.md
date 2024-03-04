@@ -1,6 +1,5 @@
 # Ramadan CTF
 
-
 # Challenge must have/do
 - The challenge must be dockerized 
 - No hard-coded tokens, API keys, or credentials should be left 
@@ -8,7 +7,7 @@
 - No backdoors or malicious code 
 - use `template.env` instead of `.env` 
 
-# Adding a challnges
+# Adding challenges
 Before you add a challenge make sure you follow these steps:
 - `git pull` Get lastest changes 
 - `git branch <challenge-name>` Create a new branch with challenge name
