@@ -21,3 +21,4 @@ For each challenge, there's a directory. This directory includes dockerfile, `.e
 - For each Dockerfile, I've set a default FLAG envar in case dynamic flags aren't used.
 - To generate a specific flag for each container, we can do:
     `docker run -e FLAG='<falg>' --name <team_name> -d <container tag>` then we can copy the challenge files with `docker cp team_name:/chall_files <destination>`
+- For each challenge, there's a `info.json` file that has some info about the challenge.
