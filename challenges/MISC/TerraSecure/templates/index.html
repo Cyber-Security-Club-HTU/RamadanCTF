@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TerraSecure Challenge</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Consolas', 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        header h1 {
+            color: #f76c6c;
+            text-align: center;
+        }
+
+        .scenario,
+        .footer {
+            background-color: #262626;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .scenario h2,
+        .footer h2 {
+            color: #f76c6c;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        pre {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        a {
+            color: #4dd0e1;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #f76c6c;
+        }
+
+        .download-link {
+            background-color: #333;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .download-link a {
+            color: #f76c6c;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>TerraSecure Challenge</h1>
+        </header>
+        <div class="scenario">
+            <h2>Scenario</h2>
+            <p>You are part of the Cybercorp security team. Cybercorp is preparing to deploy secret operations and
+                requires a secure AWS EC2 instance. Your task is to ensure the instance's security settings comply with
+                Cybercorp's policies.</p>
+            <ol>
+                <li>Download the <code>main.tf</code> file.</li>
+                <li>Modify it to restrict SSH access to the development department's IP range: 192.0.2.0/24 and prevent
+                    public internet access.</li>
+                <li>Copy and paste your updated configuration into the text area below and submit it to verify.</li>
+            </ol>
+            <div class="download-link">
+                <a href="https://drive.google.com/file/d/1Q1P-fzLG61SKTbb1aEK-sU7bEocxCcjs/view?usp=drive_link"
+                    target="_blank" download="main.tf">Download main.tf</a>
+            </div>
+        </div>
+        <form method="post">
+            <label for="terraform_config">Paste your modified Terraform configuration here:</label>
+            <textarea id="terraform_config" name="terraform_config"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+        {% if result %}
+        <pre>{{ result }}</pre>
+        {% endif %}
+        <div class="footer">
+            <h2>Real-World Terraform Learning Resources</h2>
+            <p>These resources can help you learn how to deploy applications and manage infrastructure using Terraform
+                in real-world scenarios:</p>
+            <ul>
+                <li><a href="https://www.terraform.io/docs" target="_blank">Official Terraform Documentation</a></li>
+                <li><a href="https://learn.hashicorp.com/terraform" target="_blank">HashiCorp Learn</a></li>
+                <li><a href="https://www.terraform.io/intro/index.html" target="_blank">Terraform Getting Started
+                        Guide</a></li>
+                <li><a href="https://registry.terraform.io/browse/modules?provider=aws" target="_blank">Terraform
+                        Modules for AWS</a></li>
+                <li><a href="https://github.com/terraform-aws-modules" target="_blank">Terraform AWS Examples</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
