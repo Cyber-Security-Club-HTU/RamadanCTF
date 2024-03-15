@@ -27,7 +27,7 @@ Review the `main.tf` file to understand the existing security group rules and EC
 Locate the ingress rule for SSH (port 22) and update the `cidr_blocks` to restrict access to `192.0.2.0/24`:
 
 ```hcl
-resource "aws_security_group" "example" {
+resource "aws_security_group" "cybercorp_operations_sg" {
   ingress {
     from_port   = 22
     to_port     = 22
@@ -42,7 +42,7 @@ resource "aws_security_group" "example" {
 Ensure the EC2 instance does not have a public IP address by setting associate_public_ip_address to false:
 
 ```hcl
-resource "aws_instance" "example" {
+resource "aws_instance" "cybercorp_operations_ec2" {
   associate_public_ip_address = false
 }
 ```
