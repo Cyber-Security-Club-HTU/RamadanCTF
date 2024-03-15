@@ -4,7 +4,7 @@
 
 # Structure:
 
-For each challenge, there's a directory. This directory includes dockerfile, `.env`, and the directory where the actual challenge files are. Here's the hierarchy:
+For each challenge, there's a directory. This directory includes dockerfile, `.env`, `info.json` file, and the directory where the actual challenge files are. Here's the hierarchy:
 -   challenge 1 (directory):
     -   challenge_files (directory):
         - chall_maker.py: The python script that will actually generate the challenge file. The flag will be the envar `FLAG`.
@@ -15,6 +15,7 @@ For each challenge, there's a directory. This directory includes dockerfile, `.e
     -   writeup (directory):
         - writeup.md
         - files needed for the writeup (challenge files, scriptss, etc)
+    -   info.json: challenge name, description, tags, and author.
 
 # Notes
 
