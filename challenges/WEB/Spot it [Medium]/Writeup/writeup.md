@@ -15,6 +15,7 @@
 ## Description
 
 * I have given you the source code, is that enough for you ?
+* *Note: The flag file is `flag.php` which exsists in the parent directory.*
 
 ## Skills Required
 
