@@ -1,4 +1,4 @@
-<font size="10">Blog</font>
+# Blog Writeup
 
 28<sup>th</sup> March 2024
 
