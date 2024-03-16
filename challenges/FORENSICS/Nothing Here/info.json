@@ -1,0 +1,6 @@
+{
+    "name":"Nothing Here",
+    "description":"It's claimed that someone has sent a message and our AI model has detected it through the traffic. Can you check sum of this traffic and see what the message was?",
+    "tags":["forensics", "wireshark", "network analysis"],
+    "author":"Khaled Alkholi"
+}
