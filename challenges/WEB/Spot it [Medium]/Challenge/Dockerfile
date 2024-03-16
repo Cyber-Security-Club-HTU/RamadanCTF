@@ -1,1 +1,2 @@
 FROM php:8.3.1-fpm
+ENV FLAG "CSC{s0Urc3_C0d3_ANAlY$i5_16568_LfI!!!}"
