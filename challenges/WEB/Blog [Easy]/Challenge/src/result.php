@@ -1,6 +1,6 @@
 <?php
 
-$FLAG = "HTU{ENUmR4T10n_!S_E5SeN7IaL}";
+$FLAG = $_ENV['FLAG'];
 
 if(isset($_POST['username']) && isset($_POST['pass']))
 {
