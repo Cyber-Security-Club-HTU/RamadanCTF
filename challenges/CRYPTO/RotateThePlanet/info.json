@@ -1,0 +1,7 @@
+{
+    "name":"RotateThePlanet",
+    "description":"Imagine spending more than 2 minutes on this challenge?",
+    "tags":["cryptography"],
+    "author":"Abdallah Mesleh",
+    "hint":"There is a very well known rotational encryption! Use Google to find it out!"
+}

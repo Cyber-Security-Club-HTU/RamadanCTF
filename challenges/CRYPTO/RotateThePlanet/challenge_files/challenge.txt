@@ -1,0 +1,5 @@
+You have come across an encrypted rotated message, that states the following:
+
+Ciphertext: VLV{KHM4710G_BL_XTLR}
+
+Try to find the decrypted message!
