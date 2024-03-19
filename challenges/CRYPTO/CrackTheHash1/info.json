@@ -3,5 +3,5 @@
     "description":"You have 3 hashes and a short wordlist. Crack the hashest to form the flag.",
     "tags":["cryptography"],
     "author":"Abdallah Mesleh",
-    "hint":"John the ripper, or hashcat could be extremely useful! The format in John the Ripper is --format=Raw-MD4, In hashcat, to specify MD4, you can use -m 900! After cracking the passwords, append them to find the flag!"
+    "hint":"Lookup hash cracking."
 }
