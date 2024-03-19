@@ -1,0 +1,13 @@
+My friend wants me to recover his password. He only has the hash and the format of the password.
+
+He ways the hash was 72a2e66fe3295d8887d95c220de7353a.
+
+The format is: ccdCdC
+
+Where c is lowercase letter, C is uppwercase, and d is digit.
+
+I've asked an expert, he said I can generate a wordlist from that format, and try using a hash cracking tool like Hashcat or JTR.
+
+I'm a newbie, could you help me recover the password?
+
+The flag is in the forat: CSC{password}

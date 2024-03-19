@@ -1,0 +1,13 @@
+We have captured multiple MD4 hashes of our target's password, separated. and an unencrypted password database which contains target's password. Decrypt the password. The flag to the challenge is CSC{password}.
+
+The first hash is: ec0d161793aac3cd30498331025d0017
+The second hash is: 9af4a3d5f2dfb4b6851b265b46fbeff3
+The final hash is: 18fbc83005acdd46847a2ae20f28a6c8
+
+You have found a wordlist containing the passwords. Run a hash crack against the wordlist to find the password for this hash!
+
+
+Hint: John the ripper, or hashcat could be extremely useful!
+Hint: The format in John the Ripper is --format=Raw-MD4, In hashcat, to specify MD4, you can use -m 900
+Hint: After cracking the passwords, append them to find the flag!
+
