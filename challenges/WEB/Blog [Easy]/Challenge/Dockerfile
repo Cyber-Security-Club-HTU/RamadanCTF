@@ -1,0 +1,2 @@
+FROM php:8.3.1-fpm
+ENV FLAG "CSC{ENUmR4T10n_!S_E5SeN7IaL}"
