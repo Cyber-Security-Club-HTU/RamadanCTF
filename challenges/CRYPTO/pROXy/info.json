@@ -3,5 +3,5 @@
     "description":"Ah, should I spend the holiday on Xmas Or Rally?",
     "tags":["cryptography"],
     "author":"Abdallah Mesleh",
-    "hint":"After XORing, find the decimal format of the binaries, match the number you found with the alphabet, and append them to find the flag!"
+    "hint":"Look at the name of this challenge. Also, there are some unnecessarily capitalized letters in the description."
 }
