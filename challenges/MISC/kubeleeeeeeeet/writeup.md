@@ -117,4 +117,4 @@ Note: If you didn't use `kubectl create` for creating the pod, you could just:
 ```
 mv /etc/flag-pod.yaml /etc/kubernetes/manifests
 ```
-This will move the flag-pod to the static pod path where the kubelet is configured to automatically create these pods ensuring the're always up and restarts them if they're deleted, this is usually used for the control plane components of kubernetes such as kubeapi-server, scheduler, controller-manager etc...
+This will move the flag-pod to the static pod path where the kubelet is configured to automatically create these pods ensuring they're always up and restarts them if they're deleted, this is usually used for the control plane components of kubernetes such as kubeapi-server, scheduler, controller-manager etc... to ensure they are resilience and secure.
