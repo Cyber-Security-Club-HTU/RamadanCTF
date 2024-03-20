@@ -9,7 +9,7 @@ The Kubeleeeeeeeet challenge is a beginner-level challenge that requires you to 
 - **Run the Docker Container**
 
   ```
-  docker run --privileged -it -v /var/run/docker.sock:/var/run/docker.sock smadi0x86/kubeleeeeeeeet-challenge:latest
+  docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock smadi0x86/kubeleeeeeeeet-challenge:latest
   ```
   
 ![image](https://github.com/Cyber-Security-Club-HTU/RamadanCTF/assets/75253629/1f1eadb7-6104-49ea-b709-ea684e4b6f21)
@@ -18,18 +18,16 @@ The Kubeleeeeeeeet challenge is a beginner-level challenge that requires you to 
 
 - **Explore the Cluster**
   The environment automatically sets up a Kubernetes cluster using KinD (Kubernetes in Docker). Once the container is running, you're inside a shell where you can interact with the Kubernetes cluster.
-  Also, it's shown that a flag-pod was copied to `/etc` folder, lets keep that in mind.
 
 ## Identifying the Issue
 
-Notice the pod that got copied to the directory `/etc/flag-pod.yaml`, we can `cat` it and see its contents which shows information about the pod such as commands, image, namespace etc...
+  In kubernetes cluster, there are control plane components that must be running and listening for events from our `kubectl` utility commands.
 
-![image](https://github.com/Cyber-Security-Club-HTU/RamadanCTF/assets/75253629/886d84b1-ab07-40e6-a69b-e1c407e0cc97)
+  To check these controlplane components (pods) that is by default running in a `kube-system` namespace:
 
-We find a useful information that is the path of the flag file `/mnt/flag/flag.txt` within the `hidden-flag-pod` pod, but it has initContainer logic that generates the flag when the pod starts only, so we need to fix the kubelet to start the pod. 
-If we try to create the pod using `kubectl` it will stay pending
-
-![image](https://github.com/Cyber-Security-Club-HTU/RamadanCTF/assets/75253629/56802ca3-701a-49c6-b98a-170214ec9e84)
+  ```bash
+  kubectl get pods -n kube-system
+  ```
 
   Notice that some control plane pods are in a `Pending` state too, indicating an issue with the kubelet.
 
@@ -63,7 +61,6 @@ Kubelet configurations are stored in the `/var/lib/kubelet.config.yaml` and if w
 
 ![image](https://github.com/Cyber-Security-Club-HTU/RamadanCTF/assets/75253629/59cad2ee-3dfc-4ffa-8fce-26ada61083f9)
 
-
   In the micro editor, use `Ctrl + S` to save and `Ctrl + Q` to exit. Modify the file to correct the CA certificate path or any other misconfigurations you find.
 
 - **Restart Kubelet**
@@ -94,27 +91,18 @@ systemctl daemon-reload
 systemctl restart kubelet
 ```
 
-![image](https://github.com/Cyber-Security-Club-HTU/RamadanCTF/assets/75253629/5bbe28a8-49c3-4a7e-aba2-947caef9e1b8)
-
-You should see the `hidden-flag-pod` in the list, indicating that kubelet has successfully started the pod.
+You should see pending pods in kube-system namespace is now running indicating kubelet is working as expected.
 
 ## Retrieving the Flag
 
-After fixing the kubelet configuration and restarting the kubelet service, the kubelet should now correctly create the pod defined in `flag-pod.yaml`.
+After fixing the kubelet configuration and restarting the kubelet service, the kubelet should now correctly run the pending pods in kube-system and send you a flag.txt file.
 
 - **Access the Flag**
-  From the pod definition in `flag-pod.yaml`, you know the flag is stored at `/mnt/flag/flag.txt` within the `hidden-flag-pod`. Use `kubectl exec` to access the pod and read the flag:
-  ```
-  kubectl exec hidden-flag-pod-kind-control-plane -n kube-system -- cat /mnt/flag/flag.txt
-  ```
-  
-![image](https://github.com/Cyber-Security-Club-HTU/RamadanCTF/assets/75253629/f10b2a5a-1364-4e72-9a45-16fd51dd393a)
 
+![image](https://github.com/Cyber-Security-Club-HTU/RamadanCTF/assets/75253629/a13ffb13-3119-445e-b5cd-afb1de5c3166)
 
-This command will display the content of `flag.txt`, revealing the flag you need to complete the challenge.
-
-Note: If you didn't use `kubectl create` for creating the pod, you could just:
+```bash
+cat /etc/flag.txt
 ```
-mv /etc/flag-pod.yaml /etc/kubernetes/manifests
-```
-This will move the flag-pod to the static pod path where the kubelet is configured to automatically create these pods ensuring they're always up and restarts them if they're deleted, this is usually used for the control plane components of kubernetes such as kubeapi-server, scheduler, controller-manager etc... to ensure they are resilience and secure.
+
+This command will display the path of `flag.txt`, revealing the flag you need to complete the challenge.
