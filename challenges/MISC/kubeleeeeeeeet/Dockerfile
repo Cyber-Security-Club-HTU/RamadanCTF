@@ -17,7 +17,6 @@ RUN curl -Lo ./kind "https://kind.sigs.k8s.io/dl/v0.11.1/kind-linux-amd64" && \
 
 # Copy setup script and pod definition
 COPY setup-kind.sh /setup-kind.sh
-COPY flag-pod.yaml /flag-pod.yaml
 
 RUN chmod +x /setup-kind.sh
 

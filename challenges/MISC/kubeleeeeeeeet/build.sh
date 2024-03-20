@@ -9,4 +9,5 @@ docker build -t smadi0x86/kubeleeeeeeeet-challenge:latest .
 docker push smadi0x86/kubeleeeeeeeet-challenge:latest
 
 # priviledged mode is required to run docker in docker (DinD)
-# docker run --privileged -it -v /var/run/docker.sock:/var/run/docker.sock smadi0x86/kubeleeeeeeeet-challenge:latest
+# docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock smadi0x86/kubeleeeeeeeet-challenge:latest
+
