@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# docker login -u smadi0x86
+
+# Build the Docker image and tag it directly with the Docker Hub repository name and tag
+docker build -t smadi0x86/kubeleeeeeeeet-challenge:latest .
+
+# Push the image to Docker Hub
+docker push smadi0x86/kubeleeeeeeeet-challenge:latest
+
+# Start Challenge
+# docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock smadi0x86/kubeleeeeeeeet-challenge:latest
+
