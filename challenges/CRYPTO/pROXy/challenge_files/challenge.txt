@@ -1,0 +1,11 @@
+My friend sent me this cipher text along with a key like this:
+
+Ciphertext: 01110 10011 01101 00110 10111 11111 11111 11111
+Key:        01101 00000 01110 11101 01111 10000 01101 00011
+
+He says I could convert it to alphabet.
+
+The alphabet:
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z { }
+
+Try to find the decrypted message!

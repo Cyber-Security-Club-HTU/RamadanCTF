@@ -1,0 +1,7 @@
+{
+    "name":"CrackTheHash2",
+    "description":"Now I only have one hash without a wordlist, but I have the password format.",
+    "tags":["cryptography"],
+    "author":"Khaled Alkholi",
+    "hint":"Lookup crunch tool"
+}

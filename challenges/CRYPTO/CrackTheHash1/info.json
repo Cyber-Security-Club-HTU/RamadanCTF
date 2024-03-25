@@ -1,0 +1,7 @@
+{
+    "name":"CrackTheHash1",
+    "description":"You have 3 hashes and a short wordlist. Crack the hashest to form the flag.",
+    "tags":["cryptography"],
+    "author":"Abdallah Mesleh",
+    "hint":"Lookup hash cracking."
+}
