@@ -1,22 +1,23 @@
+# Use a base image with CMake and necessary dependencies
+FROM gcc:latest
 
-FROM ubuntu:latest
+ENV FLAG="CSC{FORMAT_STRING}"
 
-# Set environment variable
-ARG MY_VARIABLE
-ENV MY_VARIABLE=$MY_VARIABLE
+# Install cmake
+RUN apt-get update && \
+    apt-get install -y cmake socat
 
-# Install necessary dependencies
-RUN apt-get update && apt-get install -y cmake
-
-# Copy your CMakeLists.txt and other necessary files
-COPY . /app
+# Set the working directory
 WORKDIR /app
 
-# Run CMake with the specified variable
-RUN cmake -Bbuild -H. -DMY_VARIABLE=${MY_VARIABLE}
+# Copy the source code into the container
+COPY ./src /app/src
 
-# Build your project
-RUN cmake --build build
+# Set up cmake build
+RUN cmake -B build src  && \
+    cd build && \
+    make
 
-# Define the command to run your application
-CMD ["./app_executable"]
+
+CMD ["socat", "TCP-LISTEN:4444,reuseaddr,fork", "EXEC:\"./build/hexhunt\",pty,stderr,setsid,sane"]
+

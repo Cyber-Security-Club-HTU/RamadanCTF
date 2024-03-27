@@ -11,12 +11,7 @@ int guess();
 
 int main(void)
 {
-    #ifdef FLAG
-        char x[] = "  "FLAG"  ";
-    #else
-        char flag = "h3r3_1$_y0ur_fl4g";
-    #endif 
-
+    char flag[] = FLAG;
     int attempts = 3;
     srand(time(NULL));
 
