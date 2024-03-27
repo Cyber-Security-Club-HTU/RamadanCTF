@@ -8,6 +8,6 @@ if (CMAKE_BUILD_TYPE STREQUAL "DBG")
 endif()
     add_compile_options(-s)
 
+add_definitions(-DFLAG="$ENV{FLAG}")
 
 add_executable(${PROJECT_NAME} ${SOURCES})
-target_compile_definitions(${PROJECT_NAME} PRIVATE FLAG="$ENV{THEFLAG}")
