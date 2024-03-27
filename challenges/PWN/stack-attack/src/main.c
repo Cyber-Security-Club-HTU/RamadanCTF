@@ -3,11 +3,7 @@
 #include <unistd.h>
 #include <string.h>
 
-#ifdef FLAG
-    char flag[] = "  "FLAG"  ";
-#else
-    char flag[] = "h3r3_1$_y0ur_fl4g";
-#endif 
+char flag[] = FLAG;
 
 void win()
 {
@@ -28,6 +24,7 @@ void cmd(char * command)
 
 int main()
 {
+    printf("Enter your password\n");
     if (check_password() == 0)
     {
         char buf[128] = {0};
