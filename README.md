@@ -4,7 +4,7 @@
 
 **Welcome to the RamadanCTF event organized by the Cyber Security Club at HTU!**
 
-**The difficuly of questions was relatively easy due to the time constraints (3 hours) of this event.**
+**The difficuly of questions is relatively easy/medium due to the time constraints (3 hours) of this event.**
 
 ## Event Details
 
