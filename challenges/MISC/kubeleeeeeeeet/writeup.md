@@ -3,6 +3,7 @@
 
 **Update:** This challenge wasn't solved by any team at the time of event, for anyone reading this writeup don't worry this challenge was made for people that already have some experience in kubernetes and docker. If you wanna learn more about kubernetes please refer to  https://www.reddit.com/r/kubernetes/comments/11wl4rj/question_what_is_the_best_way_to_learn_kubernetes/
 
+Also, you can do a workaround by escaping the container and directly reading the kind-setup.sh as this is the downside of KinD. But if you really wanna learn, solve the challenge without any workarounds.
 
 ## Overview
 
