@@ -2,14 +2,15 @@
 
 <img width="1600" alt="Banner" src="https://github.com/Cyber-Security-Club-HTU/RamadanCTF/assets/75253629/04a4e15f-d3d6-4d8d-89bb-cfa61c588577">
 
-Welcome to the RamadanCTF event organized by the Cyber Security Club at HTU!
+**Welcome to the RamadanCTF event organized by the Cyber Security Club at HTU!**
 
-The difficuly of questions was relatively easy due to the time constraints (3 hours) of this event.
+**The difficuly of questions was relatively easy due to the time constraints (3 hours) of this event.**
 
 ## Event Details
-Date: 28/03/2024
-Time: 7:30 PM
-Location: King Hussein Business Park, HTU, Orange Village
+
+- **Date:** 28/03/2024
+- **Time:** 7:30 PM
+- **Location:** King Hussein Business Park, HTU, Orange Village
 
 ## Challenge Categories
 
